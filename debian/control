@@ -1,4 +1,4 @@
-Source: linux
+Source: linux-libre
 Section: utils
 Priority: optional
 Maintainer: Ali Riza KESKIN <parduscix@yandex.ru>
@@ -6,7 +6,7 @@ Build-Depends: make, dwarves, flex, libssl-dev, bison, bc, zstd, libelf-dev
 Standards-Version: 4.3.0
 Homepage: https://example.org
 
-Package: linux
+Package: linux-libre
 Architecture: amd64
 Depends: ${misc:Depends}, libc6
 Description: The linux kernel

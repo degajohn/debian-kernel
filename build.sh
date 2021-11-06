@@ -6,9 +6,9 @@ if echo ${VERSION} | grep -e "\.0$" ; then
 fi
 # Stage 1: Get version and fetch source code
 # fetch source
-wget -c https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-${VERSION}.tar.xz
+wget -c http://linux-libre.fsfla.org/pub/linux-libre/releases/${VERSION}-gnu/linux-libre-${VERSION}-gnu.tar.xz
 # extrack if directory not exists
-[[ -d linux-${VERSION} ]] || tar -xvf linux-${VERSION}.tar.xz
+[[ -d linux-${VERSION} ]] || tar -xvf linux-libre-${VERSION}-gnu.tar.xz
 echo 1 > .stage
 
 
