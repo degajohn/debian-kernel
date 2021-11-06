@@ -23,7 +23,7 @@ jobs:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "latest"
           prerelease: false
-          title: "Auto Build"
+          title: "Auto build linux"
           files: |
             /home/runner/work/debian-kernel/*.deb
             /home/runner/work/debian-kernel/debian-kernel/*.deb
