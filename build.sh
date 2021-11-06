@@ -28,7 +28,7 @@ export VERSION=$(cat ../debian/changelog | head -n 1 | sed "s/.*(//g" | sed "s/)
 yes "" | make bzImage modules -j$(nproc)
 
 # Stage 4: Install source code (Like archlinux)
-pkgdir=../debian/linux
+pkgdir=../debian/linux-libre
 mkdir -p $pkgdir
 modulesdir=${pkgdir}/lib/modules/${VERSION}
 builddir="$pkgdir/lib/modules/${VERSION}/build"
