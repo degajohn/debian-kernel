@@ -21,14 +21,14 @@ rm -f x86_64_defconfig
 cd linux-${VERSION}
 
 # Redefine version
-export VERSION=$(cat ../debian/changelog | head -n 1 | sed "s/.*(//g" | sed "s/).*//g")
+export VERSION=$(cat ../debian/changelog | head -n 1 | sed "s/.*(//g" | sed "s/).*//g")-gnu
 
 # Stage 3: Build source code
 # build source
 yes "" | make bzImage modules -j$(nproc)
 
 # Stage 4: Install source code (Like archlinux)
-pkgdir=../debian/linux
+pkgdir=../debian/linux-libre
 mkdir -p $pkgdir
 modulesdir=${pkgdir}/lib/modules/${VERSION}
 builddir="$pkgdir/lib/modules/${VERSION}/build"
